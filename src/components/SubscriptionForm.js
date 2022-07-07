@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import moment from "moment";
-import "./ContactForm.css";
+import "./SubscriptionForm.css";
 
 const ContactForm = () => {
+  const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
   const [dateofBirth, setDateOfBirth] = useState("");
   const [postCode, setPostCode] = useState("");
   const [mobile, setMobile] = useState("");
@@ -18,6 +18,17 @@ const ContactForm = () => {
   const [mobileError, setMobileError] = useState("");
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const _handleClick = (event) => {
+    // reset all the state variables to initial state
+    setIsSubmitted(false);
+    setEmail("");
+    setFirstName("");
+    setLastName("");
+    setDateOfBirth("");
+    setPostCode("");
+    setMobile("");
+  }
 
   const submitUserDetails = async () => {
     const userData = {
@@ -123,9 +134,7 @@ const ContactForm = () => {
         </h2>
         <button
           className="button"
-          onClick={(e) => {
-            setIsSubmitted(false);
-          }}
+          onClick={_handleClick}
         >
           Back to home
         </button>

@@ -1,9 +1,8 @@
-import ContactForm from "./components/ContactForm";
-
+import SubscriptionForm from "./components/SubscriptionForm"
 function App() {
   return (
     <div className="App">
-      <ContactForm />
+      <SubscriptionForm />
     </div>
   );
 }
