@@ -19,6 +19,8 @@ User can submit the following details through the form:
 
 The user input is validated, and any errors related to the input are displayed to the user and need to be resolved before the form can be submitted.
 
+Once the form is submitted successfully user is shown a success message and allowed to redirect to the form to submit another entry.
+
 ### `Dependencies`
 
 - Axios
