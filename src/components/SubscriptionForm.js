@@ -4,20 +4,20 @@ import moment from "moment";
 import "./SubscriptionForm.css";
 
 const ContactForm = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(""); // Initialising a state variable for each input
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [dateofBirth, setDateOfBirth] = useState("");
   const [postCode, setPostCode] = useState("");
   const [mobile, setMobile] = useState("");
 
-  const [firstNameErrors, setFirstNameErrors] = useState([]);
+  const [firstNameErrors, setFirstNameErrors] = useState([]); // Initialising a state variable for each input field error
   const [lastNameErrors, setlastNameErrors] = useState([]);
   const [emailErrors, setEmailErrors] = useState([]);
   const [postCodeError, setPostCodeError] = useState("");
   const [mobileError, setMobileError] = useState("");
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false); // Initialising a state variable to determine state of the form
 
   const _handleClick = (event) => {
     // reset all the state variables to initial state
@@ -28,7 +28,7 @@ const ContactForm = () => {
     setDateOfBirth("");
     setPostCode("");
     setMobile("");
-  }
+  };
 
   const submitUserDetails = async () => {
     const userData = {
@@ -132,10 +132,7 @@ const ContactForm = () => {
         <h2>
           You are now subscribed successfully! Stay tuned for future updates!!{" "}
         </h2>
-        <button
-          className="button"
-          onClick={_handleClick}
-        >
+        <button className="button" onClick={_handleClick}>
           Back to home
         </button>
       </div>
